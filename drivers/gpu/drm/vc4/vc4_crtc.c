@@ -93,7 +93,7 @@ static void vc4_crtc_mode_set_nofb(struct drm_crtc *crtc)
 		       ((mode->flags & DRM_MODE_FLAG_INTERLACE) ? 1 : 0));
 	u32 format = PV_CONTROL_FORMAT_24;
 	bool debug_dump_regs = false;
-
+return;
 	if (debug_dump_regs) {
 		DRM_INFO("CRTC %d regs before:\n", drm_crtc_index(crtc));
 		vc4_crtc_dump_regs(vc4_crtc);

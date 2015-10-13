@@ -144,6 +144,7 @@ static int vc4_atomic_commit(struct drm_device *dev,
 	 * current layout.
 	 */
 
+	async=0;
 	if (async) {
 		vc4_queue_seqno_cb(dev, &c->cb, wait_seqno,
 				   vc4_atomic_complete_commit_seqno_cb);
