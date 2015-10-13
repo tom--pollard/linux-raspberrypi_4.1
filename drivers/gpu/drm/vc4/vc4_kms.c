@@ -219,6 +219,8 @@ vc4_kms_load(struct drm_device *dev)
 	dev->mode_config.preferred_depth = 24;
 	dev->mode_config.async_page_flip = true;
 
+	dev->vblank_disable_allowed = true;
+
 	ret = vc4_init_modeset_objects(dev);
 	if (ret)
 		goto fail;
